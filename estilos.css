@@ -1,0 +1,67 @@
+.header{
+    background-color: darkblue;
+    grid-area: header;
+    
+   
+}
+ul{
+    display: grid;
+    grid-template-columns: 50% 1fr 1fr 1fr;
+    gap: .2em;
+    
+}
+.sub1:hover{
+    color: seagreen;
+    cursor:pointer;
+}
+.nav{
+    background-color: darkcyan;
+    grid-area: nav;
+}
+.principal{
+    background-color: darkmagenta;
+    grid-area: principal;
+}
+.aside{
+    background-color: lawngreen;
+    grid-area: aside;
+}
+.footer{
+    background-color: lightblue;
+    grid-area: footer;
+    
+}
+.grid{
+    display: grid;
+    height: 100vh;
+    margin:0%;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 18fr 1fr;
+    gap: .2em;
+    grid-template-areas: 
+    "header header header"
+    "nav principal aside"
+    "footer footer footer";
+}
+@media screen and (max-width:760px){
+    .grid{
+        display: grid;
+        height: 100vh;
+        margin:0%;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 60% 1fr;
+        gap: .2em;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "principal"
+        "footer";
+    }
+    .nav{display: none;}
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: .2em;
+        
+    }
+}
